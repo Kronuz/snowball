@@ -1,0 +1,37 @@
+arabic          UTF_8                   arabic,ar,ara
+armenian        UTF_8                   armenian,hy,hye,arm
+basque          UTF_8,ISO_8859_1        basque,eu,eus,baq
+catalan         UTF_8,ISO_8859_1        catalan,ca,cat
+czech           UTF_8,ISO_8859_2        czech,cs,ces,cze
+danish          UTF_8,ISO_8859_1        danish,da,dan
+dutch           UTF_8,ISO_8859_1        dutch,nl,dut,nld,kraaij_pohlmann
+earlymodernenglish UTF_8                earlymodernenglish
+english         UTF_8,ISO_8859_1        english,en,eng
+esperanto       UTF_8                   esperanto,eo,epo
+estonian        UTF_8                   estonian,et,est
+finnish         UTF_8,ISO_8859_1        finnish,fi,fin
+french          UTF_8,ISO_8859_1        french,fr,fre,fra
+german          UTF_8,ISO_8859_1        german,de,ger,deu
+greek           UTF_8                   greek,el,gre,ell
+hindi           UTF_8                   hindi,hi,hin
+hungarian       UTF_8,ISO_8859_2        hungarian,hu,hun
+indonesian      UTF_8,ISO_8859_1        indonesian,id,ind
+irish           UTF_8,ISO_8859_1        irish,ga,gle
+italian         UTF_8,ISO_8859_1        italian,it,ita
+lithuanian      UTF_8                   lithuanian,lt,lit
+nepali          UTF_8                   nepali,ne,nep
+norwegian       UTF_8,ISO_8859_1        norwegian,no,nor
+persian         UTF_8                   persian,fa,fas,per
+polish          UTF_8,ISO_8859_2        polish,pl,pol
+portuguese      UTF_8,ISO_8859_1        portuguese,pt,por
+romanian        UTF_8                   romanian,ro,rum,ron
+russian         UTF_8,KOI8_R            russian,ru,rus
+serbian         UTF_8                   serbian,sr,srp
+sesotho         UTF_8                   sesotho,st,sot
+spanish         UTF_8,ISO_8859_1        spanish,es,esl,spa
+swedish         UTF_8,ISO_8859_1        swedish,sv,swe
+tamil           UTF_8                   tamil,ta,tam
+turkish         UTF_8                   turkish,tr,tur
+yiddish         UTF_8                   yiddish,yi,yid
+porter          UTF_8,ISO_8859_1        porter                  english
+dutch_porter    UTF_8,ISO_8859_1        dutch_porter            dutch

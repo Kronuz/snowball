@@ -1,0 +1,368 @@
+/* Generated from irish.sbl by Snowball 3.1.1 - https://snowballstem.org/ */
+
+#include "stem_UTF_8_irish.h"
+
+#include <stddef.h>
+
+#include "../runtime/snowball_runtime.h"
+
+#ifdef SNOWBALL_BIGENDIAN
+#define S(W) ((0x##W & 0xff) << 8 | 0x##W >> 8)
+#else
+#define S(W) (0x##W)
+#endif
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+extern int kronuz_snowball_irish_stem(struct kronuz_snowball_SN_env * z);
+#ifdef __cplusplus
+}
+#endif
+
+static const symbol s_0[] = { 'f' };
+static const symbol s_1[] = { 's' };
+static const symbol s_2[] = { 'b' };
+static const symbol s_3[] = { 'c' };
+static const symbol s_4[] = { 'd' };
+static const symbol s_5[] = { 'g' };
+static const symbol s_6[] = { 'p' };
+static const symbol s_7[] = { 't' };
+static const symbol s_8[] = { 'm' };
+static const symbol s_9[] = { 'a', 'r', 'c' };
+static const symbol s_10[] = { 'g', 'i', 'n' };
+static const symbol s_11[] = { 'g', 'r', 'a', 'f' };
+static const symbol s_12[] = { 'p', 'a', 'i', 't', 'e' };
+static const symbol s_13[] = { 0xC3, 0xB3, 'i', 'd' };
+
+static const unsigned short a_0[] = {
+    0x0000 , 0x7462 , 0x0015 , 0x0064 , 0x0067 , 0x0000 , 0x00BB , 0x00BE ,
+    0x00C2 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x00C5 , 0x0109 , 0x0000 ,
+    0x0146 , 0x0000 , 0x0000 , 0x0149 , 0x014C , 0x0000 , 0x7027 , 0xFFFF ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0061 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0xFFF8 , 0x0004 , 0x6666 , 0xFFFE , 0x0000 , 0x6868 , 0xFFFB , 0x0000 ,
+    0x7427 , 0x00B7 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0xFFFA , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0xFFF7 , 0x0001 ,
+    0x0002 , 0xFFFE , S(6866), 0x0000 , 0x6868 , 0xFFFE , 0x0000 , 0x6368 ,
+    0xFFFB , 0xFFF9 , 0x0000 , 0x2D2D , 0xFFFF , 0x0000 , 0x6827 , 0xFFFF ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0xFFFC , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0xFFF6 , 0x0000 , 0x672D , 0xFFFF , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0xFFFA , 0x0000 , 0x0000 , 0xFFF9 , 0x0000 , 0x6868 ,
+    0xFFF8 , 0x0000 , 0x6868 , 0xFFFD , 0x0000 , 0x732D , 0xFFFF , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0xFFF7 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0xFFFD
+};
+
+static const unsigned short a_1[] = {
+    0x0000 , 0xAD61 , 0x004F , 0x0000 , 0x0000 , 0x0000 , 0x0058 , 0x0000 ,
+    0x0000 , 0x005F , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x006E , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0074 , 0x0000 ,
+    0x0006 , 0x0055 , S(ADC3), S(636F), S(7468), 0x0001 , 0x6161 , 0xFFFF ,
+    0x0000 , 0x0002 , 0x005C , S(7269), 0x0002 , 0x6161 , 0xFFFE , 0x0000 ,
+    0x626D , 0x0063 , 0x006A , 0x0000 , 0x6169 , 0x0067 , 0x0055 , 0x0001 ,
+    0x6565 , 0xFFFF , 0x0000 , 0x6169 , 0x0067 , 0x0055 , 0x0000 , 0x0005 ,
+    0x0055 , S(ADC3), S(636F), S(0068), 0x0000 , 0x0003 , 0x005C , S(7269),
+    S(00C3)
+};
+
+static const unsigned short a_2[] = {
+    0x0000 , 0xAD61 , 0x004F , 0x0000 , 0x0000 , 0x0000 , 0x007B , 0x0000 ,
+    0x0000 , 0x0080 , 0x0000 , 0x0000 , 0x0000 , 0x00A5 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x00AF , 0x00BD , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x0000 , 0x00C9 , 0x0000 ,
+    0x6874 , 0x0053 , 0x0064 , 0x0000 , 0x0002 , 0x0057 , S(6361), 0x0000 ,
+    0x6574 , 0x005B , 0x0060 , 0x0000 , 0x0004 , 0xFFFA , S(B3C3), S(6469),
+    0x0000 , 0x0002 , 0xFFFB , S(6170), 0x0000 , 0x0002 , 0x0068 , S(6863),
+    0x0000 , 0x616F , 0x006C , 0x0074 , 0x0001 , 0x6365 , 0x0070 , 0xFFFF ,
+    0x0000 , 0x0002 , 0xFFFE , S(7261), 0x0000 , 0x0007 , 0xFFFC , S(7267),
+    S(6661), S(C361), S(00AD), 0x0000 , 0x0004 , 0xFFFB , S(6170), S(7469),
+    0x0000 , 0x6367 , 0x0084 , 0x0099 , 0x0000 , 0x616F , 0x0088 , 0x0074 ,
+    0x0001 , 0x6574 , 0x008C , 0x0060 , 0x0001 , 0x646E , 0x0090 , 0x0095 ,
+    0x0000 , 0x0003 , 0xFFFA , S(B3C3), S(0069), 0x0000 , 0x0002 , 0xFFFD ,
+    S(6967), 0x0000 , 0x6969 , 0x009C , S(0000), S(6164), S(00A0), S(0090),
+    0x0000 , 0x0003 , 0xFFFB , S(6170), S(0074), 0x0000 , 0x0007 , 0x00AC ,
+    S(6361), S(7468), S(BAC3), S(0069), 0x0001 , 0x6565 , 0xFFFF , 0x0000 ,
+    0x6169 , 0x00B3 , 0x00B8 , 0x0000 , 0x0004 , 0xFFFD , S(6967), S(656E),
+    0x0000 , 0x0003 , 0xFFFD , S(6967), S(006E), 0x0000 , 0x0002 , 0x00C1 ,
+    S(6863), 0x0000 , 0x616F , 0x00C5 , 0x0074 , 0x0001 , 0x6365 , 0x0070 ,
+    0xFFFF , 0x0000 , 0x0005 , 0x00CF , S(6863), S(6174), S(00C3), 0x0000 ,
+    0x616F , 0x00D3 , 0x0074 , 0x0000 , 0x0003 , 0xFFFE , S(7261), S(0063)
+};
+
+static const unsigned short a_3[] = {
+    0x0000 , 0x7264 , 0x0011 , 0x0000 , 0x0000 , 0x0000 , 0x001F , 0x0000 ,
+    0x0000 , 0x0000 , 0x0030 , 0x0000 , 0x0035 , 0x0000 , 0x0000 , 0x0000 ,
+    0x0039 , 0x0000 , 0x0002 , 0x0015 , S(696D), 0x0000 , 0x69AD , 0x0019 ,
+    0x001C , 0x0001 , 0x6161 , 0xFFFF , 0x0000 , 0xC3C3 , 0x0019 , 0x0000 ,
+    0x6464 , 0x0022 , 0x0000 , 0x6169 , 0x0026 , 0x0029 , 0x0002 , 0x6565 ,
+    0xFFFE , 0x0000 , 0x6166 , 0x002D , 0xFFFF , 0x0000 , 0x6666 , 0xFFFF ,
+    0x0000 , 0x0003 , 0xFFFE , S(A1C3), S(0069), 0x0000 , 0x0002 , 0xFFFE ,
+    S(6961), 0x0000 , 0x6161 , 0x003C , 0x0000 , 0x6574 , 0x0040 , 0xFFFE ,
+    0x0000 , 0x7474 , 0xFFFE
+};
+
+static const unsigned char g_v[] = { 17, 65, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 17, 4, 2 };
+
+extern int kronuz_snowball_irish_stem(struct kronuz_snowball_SN_env * z) {
+    int among_var;
+    int i_p2;
+    int i_p1;
+    int i_pV;
+    {
+        int v_1 = z->c;
+        z->bra = z->c;
+        among_var = kronuz_snowball_find_among(z, a_0);
+        if (!among_var) goto lab0;
+        z->ket = z->c;
+        switch (among_var) {
+            case 1:
+                {
+                    int ret = kronuz_snowball_slice_del(z);
+                    if (ret < 0) return ret;
+                }
+                break;
+            case 2:
+                {
+                    int ret = kronuz_snowball_slice_from_s(z, 1, s_0);
+                    if (ret < 0) return ret;
+                }
+                break;
+            case 3:
+                {
+                    int ret = kronuz_snowball_slice_from_s(z, 1, s_1);
+                    if (ret < 0) return ret;
+                }
+                break;
+            case 4:
+                {
+                    int ret = kronuz_snowball_slice_from_s(z, 1, s_2);
+                    if (ret < 0) return ret;
+                }
+                break;
+            case 5:
+                {
+                    int ret = kronuz_snowball_slice_from_s(z, 1, s_3);
+                    if (ret < 0) return ret;
+                }
+                break;
+            case 6:
+                {
+                    int ret = kronuz_snowball_slice_from_s(z, 1, s_4);
+                    if (ret < 0) return ret;
+                }
+                break;
+            case 7:
+                {
+                    int ret = kronuz_snowball_slice_from_s(z, 1, s_5);
+                    if (ret < 0) return ret;
+                }
+                break;
+            case 8:
+                {
+                    int ret = kronuz_snowball_slice_from_s(z, 1, s_6);
+                    if (ret < 0) return ret;
+                }
+                break;
+            case 9:
+                {
+                    int ret = kronuz_snowball_slice_from_s(z, 1, s_7);
+                    if (ret < 0) return ret;
+                }
+                break;
+            case 10:
+                {
+                    int ret = kronuz_snowball_slice_from_s(z, 1, s_8);
+                    if (ret < 0) return ret;
+                }
+                break;
+        }
+    lab0:
+        z->c = v_1;
+    }
+    i_pV = z->l;
+    i_p1 = z->l;
+    i_p2 = z->l;
+    {
+        int v_2 = z->c;
+        {
+            int ret = kronuz_snowball_out_grouping_U(z, g_v, 97, 250, 1);
+            if (ret < 0) goto lab2;
+            z->c += ret;
+        }
+        i_pV = z->c;
+        {
+            int ret = kronuz_snowball_in_grouping_U(z, g_v, 97, 250, 1);
+            if (ret < 0) goto lab2;
+            z->c += ret;
+        }
+        i_p1 = z->c;
+        {
+            int ret = kronuz_snowball_out_grouping_U(z, g_v, 97, 250, 1);
+            if (ret < 0) goto lab2;
+            z->c += ret;
+        }
+        {
+            int ret = kronuz_snowball_in_grouping_U(z, g_v, 97, 250, 1);
+            if (ret < 0) goto lab2;
+            z->c += ret;
+        }
+        i_p2 = z->c;
+    lab2:
+        z->c = v_2;
+    }
+    z->lb = z->c; z->c = z->l;
+    {
+        int v_3 = z->l - z->c;
+        z->ket = z->c;
+        among_var = kronuz_snowball_find_among_b(z, a_1);
+        if (!among_var) goto lab3;
+        z->bra = z->c;
+        switch (among_var) {
+            case 1:
+                if (i_p1 > z->c) goto lab3;
+                {
+                    int ret = kronuz_snowball_slice_del(z);
+                    if (ret < 0) return ret;
+                }
+                break;
+            case 2:
+                if (i_p2 > z->c) goto lab3;
+                {
+                    int ret = kronuz_snowball_slice_del(z);
+                    if (ret < 0) return ret;
+                }
+                break;
+        }
+    lab3:
+        z->c = z->l - v_3;
+    }
+    {
+        int v_4 = z->l - z->c;
+        z->ket = z->c;
+        among_var = kronuz_snowball_find_among_b(z, a_2);
+        if (!among_var) goto lab4;
+        z->bra = z->c;
+        switch (among_var) {
+            case 1:
+                if (i_p2 > z->c) goto lab4;
+                {
+                    int ret = kronuz_snowball_slice_del(z);
+                    if (ret < 0) return ret;
+                }
+                break;
+            case 2:
+                {
+                    int ret = kronuz_snowball_slice_from_s(z, 3, s_9);
+                    if (ret < 0) return ret;
+                }
+                break;
+            case 3:
+                {
+                    int ret = kronuz_snowball_slice_from_s(z, 3, s_10);
+                    if (ret < 0) return ret;
+                }
+                break;
+            case 4:
+                {
+                    int ret = kronuz_snowball_slice_from_s(z, 4, s_11);
+                    if (ret < 0) return ret;
+                }
+                break;
+            case 5:
+                {
+                    int ret = kronuz_snowball_slice_from_s(z, 5, s_12);
+                    if (ret < 0) return ret;
+                }
+                break;
+            case 6:
+                {
+                    int ret = kronuz_snowball_slice_from_s(z, 4, s_13);
+                    if (ret < 0) return ret;
+                }
+                break;
+        }
+    lab4:
+        z->c = z->l - v_4;
+    }
+    {
+        int v_5 = z->l - z->c;
+        z->ket = z->c;
+        if (z->c - 2 <= z->lb || z->p[z->c - 1] >> 5 != 3 || !((282896 >> (z->p[z->c - 1] & 0x1f)) & 1)) goto lab5;
+        among_var = kronuz_snowball_find_among_b(z, a_3);
+        if (!among_var) goto lab5;
+        z->bra = z->c;
+        switch (among_var) {
+            case 1:
+                if (i_pV > z->c) goto lab5;
+                {
+                    int ret = kronuz_snowball_slice_del(z);
+                    if (ret < 0) return ret;
+                }
+                break;
+            case 2:
+                if (i_p1 > z->c) goto lab5;
+                {
+                    int ret = kronuz_snowball_slice_del(z);
+                    if (ret < 0) return ret;
+                }
+                break;
+        }
+    lab5:
+        z->c = z->l - v_5;
+    }
+    z->c = z->lb;
+    return 1;
+}
+
+extern struct kronuz_snowball_SN_env * kronuz_snowball_irish_create_env(void) {
+    return kronuz_snowball_SN_new_env(sizeof(struct kronuz_snowball_SN_env));
+}
