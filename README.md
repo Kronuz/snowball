@@ -1,5 +1,7 @@
 # snowball
 
+[![CI](https://github.com/Kronuz/snowball/actions/workflows/ci.yml/badge.svg)](https://github.com/Kronuz/snowball/actions/workflows/ci.yml)
+
 The [Snowball](https://snowballstem.org/) stemmers for C++20: the C code Snowball
 generates for all 38 of its algorithms, checked in, behind a small C++ API. The pinned
 Snowball commit (`tools/SNOWBALL_COMMIT`) stems exactly as Xapian 2.1.0 does.
