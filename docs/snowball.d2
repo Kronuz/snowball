@@ -1,0 +1,15 @@
+# snowball: one API over 38 generated stemmers. Render: d2 --layout elk --sketch --theme 302 docs/snowball.d2 docs/snowball.svg
+direction: right
+name: "\"en\" · \"eng\" · \"english\"" {shape: oval}
+canon: "canonical name"
+gen: "generated C stemmers (38)" {
+  en: english
+  ru: russian
+  more: "…"
+}
+word: "\"running\"" {shape: page}
+stem: "\"run\"" {shape: page}
+name -> canon: "alias table"
+canon -> gen.en
+word -> gen.en
+gen.en -> stem: "string_view"

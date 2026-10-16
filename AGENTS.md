@@ -11,6 +11,7 @@ tools/stem.cc              snowball_stem: word<TAB>stem for stdin lines.
 test/test.cc               Aliases, moves, and test/vectors/<language>.tsv.
 fuzz/fuzz_stem.cc          libFuzzer: arbitrary bytes in every language.
 bench/bench.cc             ns per word over a word list.
+docs/snowball.d2     README diagram; render: d2 --layout elk --sketch --theme 302 docs/snowball.d2 docs/snowball.svg
 ```
 
 ## Invariants
