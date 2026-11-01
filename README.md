@@ -86,13 +86,13 @@ commit `tools/SNOWBALL_COMMIT` pins ([3a59de9](https://github.com/snowballstem/s
 `v3.1.1-116`). Both run the same generated stemmers, so the table shows what the C++ class adds
 over calling the C API directly. The bench checks that both return the same stem for every word.
 The ratio is snowball's time over libstemmer's, so below 1 is faster. Apple clang 17, `-O3`, one
-thread, on an Apple M4 Pro (macOS 26).
+thread, on an Apple M4 Pro (macOS 26) and an Intel Core i9-9980HK (macOS 15).
 
-| Language | Apple M4 Pro: snowball | libstemmer | ratio |
-| --- | ---: | ---: | ---: |
-| english (42,649 words) | 114 ns | 113 ns | 1.02 |
-| russian (49,785 words) | 132 ns | 130 ns | 1.02 |
-| german (35,053 words) | 191 ns | 192 ns | 0.99 |
+| Language | Apple M4 Pro: snowball | libstemmer | ratio | Intel Core i9-9980HK: snowball | libstemmer | ratio |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| english (42,649 words) | 114 ns | 113 ns | 1.02 | 194 ns | 195 ns | 1.00 |
+| russian (49,785 words) | 132 ns | 130 ns | 1.02 | 206 ns | 206 ns | 1.00 |
+| german (35,053 words) | 191 ns | 192 ns | 0.99 | 335 ns | 326 ns | 1.03 |
 
 ```sh
 cmake -B build -DCMAKE_BUILD_TYPE=Release -DSNOWBALL_BENCH_LIBSTEMMER=ON
