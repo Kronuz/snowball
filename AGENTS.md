@@ -10,7 +10,7 @@ tools/regenerate.sh        Rebuilds generated/ and runtime/ from tools/SNOWBALL_
 tools/stem.cc              snowball_stem: word<TAB>stem for stdin lines.
 test/test.cc               Aliases, moves, and test/vectors/<language>.tsv.
 fuzz/fuzz_stem.cc          libFuzzer: arbitrary bytes in every language.
-bench/bench.cc             ns per word over a word list.
+bench/bench.cc             ns per word over a word list; with -DSNOWBALL_BENCH_LIBSTEMMER=ON, also upstream libstemmer built from the pinned commit, and every stem must be equal.
 ```
 
 ## Invariants

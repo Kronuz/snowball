@@ -20,6 +20,32 @@ endif()
 if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
   add_executable(snowball_bench bench/bench.cc)
   target_link_libraries(snowball_bench PRIVATE snowball)
+  # Upstream libstemmer as the comparator: fetches Snowball at the commit this library pins
+  # (tools/SNOWBALL_COMMIT) and builds libstemmer.a with its own makefile (GNU make and Perl).
+  # Only snowball_bench uses it, and the library never links it.
+  option(SNOWBALL_BENCH_LIBSTEMMER "Also time upstream libstemmer in snowball_bench" OFF)
+  if(SNOWBALL_BENCH_LIBSTEMMER)
+    include(FetchContent)
+    file(STRINGS "${CMAKE_CURRENT_SOURCE_DIR}/tools/SNOWBALL_COMMIT" SNOWBALL_PINNED_COMMIT LIMIT_COUNT 1)
+    FetchContent_Declare(
+      snowball_upstream
+      GIT_REPOSITORY https://github.com/snowballstem/snowball.git
+      GIT_TAG        ${SNOWBALL_PINNED_COMMIT}
+      SOURCE_SUBDIR  none  # no CMakeLists.txt there: populate only
+    )
+    FetchContent_MakeAvailable(snowball_upstream)
+    set(SNOWBALL_UPSTREAM_LIB "${snowball_upstream_SOURCE_DIR}/libstemmer.a")
+    add_custom_command(
+      OUTPUT "${SNOWBALL_UPSTREAM_LIB}"
+      COMMAND make -C "${snowball_upstream_SOURCE_DIR}" libstemmer.a "CC=${CMAKE_C_COMPILER}" "CFLAGS=-O3 -DNDEBUG"
+      COMMENT "Building upstream libstemmer"
+      VERBATIM)
+    add_custom_target(libstemmer_upstream DEPENDS "${SNOWBALL_UPSTREAM_LIB}")
+    add_dependencies(snowball_bench libstemmer_upstream)
+    target_include_directories(snowball_bench PRIVATE "${snowball_upstream_SOURCE_DIR}/include")
+    target_link_libraries(snowball_bench PRIVATE "${SNOWBALL_UPSTREAM_LIB}")
+    target_compile_definitions(snowball_bench PRIVATE SNOWBALL_BENCH_LIBSTEMMER)
+  endif()
   option(SNOWBALL_FUZZ "Build the libFuzzer target" OFF)
   if(SNOWBALL_FUZZ)
     add_executable(snowball_fuzz fuzz/fuzz_stem.cc)
