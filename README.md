@@ -79,19 +79,31 @@ Not for:
 
 ## ⚡ Performance
 
-`bench/bench.cc` stems every word of a snowball-data vocabulary ten times and reports the mean,
-on an Intel Core i9-9980HK with Apple clang, `-O3`:
+ns to stem one word: every word of a [snowball-data](https://github.com/snowballstem/snowball-data/tree/019921c3a41c2b70063ee3feb215a00c8e594597)
+vocabulary (`voc.txt`), in file order, the best of five passes of `bench/bench.cc`. *snowball* is
+this library; *libstemmer* is the C library of the Snowball project, built with `-O3` from the
+commit `tools/SNOWBALL_COMMIT` pins ([3a59de9](https://github.com/snowballstem/snowball/tree/3a59de937b5d2a5865c765da769d922ad43c9846),
+`v3.1.1-116`). Both run the same generated stemmers, so the table shows what the C++ class adds
+over calling the C API directly. The bench checks that both return the same stem for every word.
+The ratio is snowball's time over libstemmer's, so below 1 is faster. Apple clang 17, `-O3`, one
+thread, on an Apple M4 Pro (macOS 26).
 
-| Language | ns per word |
-| --- | ---: |
-| english | 220 |
-| russian | 233 |
-| german | 355 |
+| Language | Apple M4 Pro: snowball | libstemmer | ratio |
+| --- | ---: | ---: | ---: |
+| english (42,649 words) | 114 ns | 113 ns | 1.02 |
+| russian (49,785 words) | 132 ns | 130 ns | 1.02 |
+| german (35,053 words) | 191 ns | 192 ns | 0.99 |
 
 ```sh
-cmake -B build -DCMAKE_BUILD_TYPE=Release && cmake --build build
+cmake -B build -DCMAKE_BUILD_TYPE=Release -DSNOWBALL_BENCH_LIBSTEMMER=ON
+cmake --build build --target snowball_bench
 ./build/snowball_bench english snowball-data/english/voc.txt
 ```
+
+`SNOWBALL_BENCH_LIBSTEMMER=ON` fetches the Snowball source at the pinned commit and builds
+`libstemmer.a` with its own makefile (GNU make and Perl); only `snowball_bench` links it. Without
+the option the bench times snowball alone. libstemmer does not ship the `lovins` stemmer, so that
+language has no comparison.
 
 ## 📚 Documentation
 
